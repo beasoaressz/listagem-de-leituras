@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block titulo %}
+    <title>Modelo Base</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+  </head>
+  <body>
+    <!-- prettier-ignore -->
+    {% block menu %}
+    <div class="bg-secondary">Menu de Navegação</div>
+    {% endblock %}
+
+    <!-- prettier-ignore -->
+    {% block destaque %}
+    <div class="alert alert-info" role="alert">
+      Esta é uma área de destaque!
+    </div>
+    {% endblock %}
+
+    <!-- prettier-ignore -->
+    <div class="container">
+    {% block conteudo %}
+      <h2>Template de Modelo</h2>
+    {% endblock %}
+    </div>
+
+    <!-- prettier-ignore -->
+    {% block rodape %}
+    <div class="bg-secondary">Rodapé</div>
+    {% endblock %}
+
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
