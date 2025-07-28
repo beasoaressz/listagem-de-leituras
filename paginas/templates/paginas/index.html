@@ -150,5 +150,33 @@
 
 <!-- prettier-ignore -->
 {% block conteudo %}
-<h1>Página Inicial do Projeto</h1>
+<main>
+  <h1>Página Inicial do Projeto</h1>
+</main>
 {% endblock %}
+
+<!-- prettier-ignore -->
+{% block rodape %}
+<div class="bg-secondary">
+  <footer class="text-white text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5>Lista de leitura</h5>
+
+          <p>Acompanhe seus livros de forma simples.</p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <p>© 2025 - Desenvolvido com Django e Bootstrap</p>
+        </div>
+        {% endblock %}
+      </div>
+    </div>
+  </footer>
+</div>
