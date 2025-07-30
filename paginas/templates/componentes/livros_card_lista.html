@@ -1,0 +1,33 @@
+<!-- <div class="mb-4 {% if not forloop.last %}border-bottom pb-3{% endif %}">
+  <div class="d-flex">
+    <h5 class="mb-3"><strong>{{ titulo }}</strong></h5>
+    <span class="badge bg-warning text-dark ms-2 mb-3">Lendo</span>
+  </div>
+
+  <div class="mt-2">
+    {% if tipo == "lendo" %}
+      <button class="btn btn-danger btn-sm">Excluir</button>
+      <button class="btn btn-success btn-sm">Concluir</button>
+    {% elif tipo == "quero_ler" %}
+      <button class="btn btn-primary btn-sm">Começar</button>
+      <button class="btn btn-danger btn-sm">Excluir</button>
+    {% elif tipo == "concluido" %}
+      <button class="btn btn-secondary btn-sm">Recomeçar</button>
+      <button class="btn btn-danger btn-sm">Excluir</button>
+    {% endif %}
+  </div>
+</div> -->
+
+<div class="card my-4">
+  <div class="card-header bg-dark text-white">
+    <i class="bi bi-book"></i> {{ titulo_secao }}
+  </div>
+  <div class="card-body">
+    <!-- prettier-ignore -->
+    {% for livro in lista_livros %}
+      {% include "componentes/livro_card.html" with titulo=livro tipo=tipo %}
+    {% empty %}
+    <p class="text-muted">Nenhum livro nessa categoria.</p>
+    {% endfor %}
+  </div>
+</div>

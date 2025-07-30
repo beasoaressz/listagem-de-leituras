@@ -2,7 +2,7 @@
 
 <!-- prettier-ignore -->
 {% block titulo %}
-<title>Página Inicial</title>
+<title>Listagem de Leituras</title>
 {% endblock %}
 
 <!-- prettier-ignore -->
@@ -146,45 +146,48 @@
 
 <!-- prettier-ignore -->
 {% block destaque %}
+<div class="container mt-4">
+  <div class="row justify-content-center g-3">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h3 class="card-title text-primary">2</h3>
+          <p class="card-text">Lendo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h3 class="card-title text-warning">3</h3>
+          <p class="card-text">Quero ler</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h3 class="card-title text-success">5</h3>
+          <p class="card-text">Concluídos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 <!-- prettier-ignore -->
 {% block conteudo %}
 <main>
-  <div class="container mt-4">
-    <div class="row justify-content-center g-3">
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <div class="card-body">
-            <h3 class="card-title text-primary">2</h3>
-            <p class="card-text">Lendo</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <div class="card-body">
-            <h3 class="card-title text-warning">3</h3>
-            <p class="card-text">Quero ler</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <div class="card-body">
-            <h3 class="card-title text-success">5</h3>
-            <p class="card-text">Concluídos</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <h1>Página Inicial do Projeto</h1>
+  <!-- prettier-ignore -->
+  {% include "componentes/livros_card_lista.html" with titulo_secao="Lendo Atualmente" lista_livros=livros_lendo tipo="lendo" %}
+  {% include "componentes/livros_card_lista.html" with titulo_secao="Quero Ler" lista_livros=livros_quero_ler tipo="quero_ler" %}
+  {% include "componentes/livros_card_lista.html" with titulo_secao="Concluídos" lista_livros=livros_concluidos tipo="concluido" %}
 </main>
 {% endblock %}
 
@@ -192,19 +195,14 @@
 {% block rodape %}
 <div class="bg-secondary">
   <footer class="text-white text-center text-lg-start">
-    <!-- Grid container -->
     <div class="container p-4">
-      <!--Grid row-->
       <div class="row">
-        <!--Grid column-->
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
           <h5>Lista de leitura</h5>
 
           <p>Acompanhe seus livros de forma simples.</p>
         </div>
-        <!--Grid column-->
 
-        <!--Grid column-->
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
           <p>© 2025 - Desenvolvido com Django e Bootstrap</p>
         </div>

@@ -1,0 +1,18 @@
+<div class="mb-4 {% if not forloop.last %}border-bottom pb-3{% endif %}">
+  <div class="d-flex">
+    <h5 class="mb-3"><strong>{{ titulo }}</strong></h5>
+    <!-- <span class="badge bg-warning text-dark ms-2 mb-3">Lendo</span> -->
+  </div>
+
+  <div class="mt-2">
+    {% if tipo == "lendo" %}
+    <button class="btn btn-danger btn-sm">Excluir</button>
+    <button class="btn btn-success btn-sm">Concluir</button>
+    {% elif tipo == "quero_ler" %}
+    <button class="btn btn-primary btn-sm">Começar</button>
+    <button class="btn btn-danger btn-sm">Excluir</button>
+    {% elif tipo == "concluido" %}
+    <span class="badge bg-success text-light ms-2 mb-3">Concluído</span>
+    {% endif %}
+  </div>
+</div>
