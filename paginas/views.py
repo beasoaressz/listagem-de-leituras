@@ -17,5 +17,5 @@ class PaginaInicial(TemplateView):
         context['livros_concluidos'] = ["Capitães da Areia", "Orgulho e Preconceito"]
         return context
 
-class SobreView(TemplateView):
-    template_name = 'paginas/sobre.html'
+class PerfilView(TemplateView):
+    template_name = 'paginas/perfil-usuario.html'
